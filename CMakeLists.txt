@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(sleep)
+add_executable(sleep sleep.c)
+target_link_libraries(sleep PRIVATE Shlwapi Shell32)
+set_target_properties(sleep PROPERTIES LINK_FLAGS "/ENTRY:main /NODEFAULTLIB")
